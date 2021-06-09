@@ -1,74 +1,31 @@
 {% include "header.html" %}
-{%extends "bootstrap/base.html" %}
-{% block content %}
-
-
-  <!-- Page Header -->
-  <header class="masthead" style="background-image: url('static/img/home-bg.jpg')">
-    <div class="overlay"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
-          <div class="site-heading">
-            <h1>Maria ou João?</h1>
-            <span class="subheading">Lindos nomes de filhos e filhas com seus significados para a escolha perfeita</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
-
+ 
   <!-- Main Content -->
   <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-md-10 mx-auto" >
+    <div class="row text-center">
+      <div class="mx-auto" >
       
-  <table class="table">     
+<table class="table-hover table-striped table-sm">
+      <thead class="thead-inverse">
+        
 
-<tr class="table-primary"> 
+          {% for table in tables %}
+          
+          <th>  {{ table|safe }}</th>
 
-{% for table in tables %}
-            
-            {{ table|safe }}
+  
 {% endfor %}
 
-</tr>
-
-</table>
-  <div class="post-preview">
-            <a href= "">
-            <h2 class="post-title">
-             
-            </h2>
-            <h3 class="post-subtitle">
-              
-               
-            </h3>
-            <hr>
-          </a>
-
-
-          
-          <p class="post-meta"> Baby Names
-            </a>
-          </p>
- 
-
-
+ </tr>
+      </thead>
+      <tbody>
             
-        </div>
-         
-        <!-- Pager -->
-        <div class="clearfix">
-         
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <hr>
+       </table>  
+ 
+   
+ 
 
   
 
   {% include "footer.html" %}
-{%endblock%}
+ 
